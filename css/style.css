@@ -1362,3 +1362,51 @@ ul {
     text-align: center;
   }
 }
+/* ==========================================================================
+   MOBILE HEADER POLISH (Compact, Sleek & App-Like)
+   ========================================================================== */
+
+@media (max-width: 600px) {
+  /* Header ki vertical padding kam karo taaki compact dikhe */
+  .site-header {
+    padding-block: 0.35rem;
+  }
+  
+  .header-flex {
+    padding-block: 0.35rem;
+    gap: 0.5rem;
+  }
+
+  /* Logo icon ko subtle aur proportional banao */
+  .logo-icon {
+    font-size: 1.35rem;
+  }
+
+  /* Company name ko phone screen ke mutabiq scale karo */
+  .company-name {
+    font-size: 1.05rem;
+  }
+
+  .company-tagline {
+    font-size: 0.62rem;
+    letter-spacing: 0.2px;
+  }
+
+  /* Button ko ek single clean line me compact pill banao */
+  .header-cta .btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.78rem;
+    white-space: nowrap; /* Do line me tootna band */
+    border-radius: var(--radius-sm);
+  }
+
+  /* Hero section title phone par balance ho */
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+}
