@@ -1401,3 +1401,70 @@ ul {
     padding: 1.75rem 1.25rem;
   }
 }
+/* ==========================================================================
+   SURGICAL REFINEMENTS (Center Top Bar, Bigger Brand, Calm Pulse)
+   ========================================================================== */
+
+/* 1. Bottom Call Button ka Bounce Calm & Gentle karo */
+.sticky-call-btn {
+  animation: calmPulse 3.5s infinite ease-in-out !important;
+}
+
+@keyframes calmPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+  }
+  50% {
+    transform: scale(1.012); /* Extremely subtle, no annoying bounce */
+    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.45);
+  }
+}
+
+/* 2. Mobile Specific Center & Spacing (Only on Phones) */
+@media (max-width: 600px) {
+
+  /* Top Bar Left me nahi ghusega, Center me clean aayega */
+  .top-bar-flex {
+    justify-content: center !important;
+    text-align: center !important;
+    flex-direction: column !important;
+    gap: 0.15rem !important;
+  }
+
+  .emergency-badge {
+    justify-content: center !important;
+    width: 100% !important;
+    font-size: 0.68rem !important;
+  }
+
+  .top-contact {
+    justify-content: center !important;
+    width: 100% !important;
+    font-size: 0.72rem !important;
+  }
+
+  /* Sunstone Valley Header: Bada aur Khula (No Chipakna) */
+  .brand-logo {
+    gap: 0.65rem !important; /* Space diya taaki icon aur text alag dikhein */
+    align-items: center !important;
+  }
+
+  .logo-icon {
+    font-size: 1.55rem !important; /* Crisp icon */
+    line-height: 1 !important;
+    letter-spacing: 2px !important;
+  }
+
+  .company-name {
+    font-size: 1.25rem !important; /* Clearly bada aur bold text */
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+  }
+
+  .company-tagline {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.3px !important;
+    margin-top: 0.1rem !important;
+  }
+}
