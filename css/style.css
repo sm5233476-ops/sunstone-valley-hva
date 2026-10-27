@@ -1435,3 +1435,114 @@ ul {
     margin-bottom: 1.25rem;
   }
 }
+/* ==========================================================================
+   FIX OVERFLOW, REMOVE GOLA (CIRCLE) & PERFECT MOBILE SCALING
+   ========================================================================== */
+
+/* 1. GOLA (CIRCLE) AUR PSEUDO ELEMENTS KO COMPLETELY REMOVE KARO */
+.hero-section::before,
+.hero-section::after,
+.hero-grid::before,
+.hero-grid::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* 2. Text ko Normal Case me wapas lao (ALL CAPS band karo) */
+.hero-title,
+.hero-subtitle,
+.hero-features li,
+.hero-actions span {
+  text-transform: none !important;
+}
+
+.hero-title {
+  text-transform: none !important;
+}
+
+/* 3. Screen par horizontal scrolling aur zoom-out lock karo */
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+.hero-section {
+  overflow: hidden !important;
+}
+
+/* 4. MOBILE SPECIFIC TUNING (Only for Phones) */
+@media (max-width: 600px) {
+  
+  /* Top Emergency Bar: Chhota aur compact */
+  .top-bar {
+    padding: 0.3rem 0 !important;
+    font-size: 0.72rem !important;
+  }
+  
+  .emergency-badge {
+    font-size: 0.68rem !important;
+    gap: 0.35rem !important;
+  }
+  
+  .pulse-dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+  
+  .top-contact {
+    font-size: 0.72rem !important;
+  }
+
+  /* Header Brand Name: Thoda sa bada aur bold (Patla nahi dikhega) */
+  .brand-logo {
+    gap: 0.5rem !important;
+  }
+
+  .logo-icon {
+    font-size: 1.35rem !important;
+    line-height: 1 !important;
+    display: inline-flex !important;
+  }
+
+  .company-name {
+    font-size: 1.15rem !important; /* Slightly bigger & clear */
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+  }
+
+  .company-tagline {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  .header-cta .btn {
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  /* Hero Title & Subtitle Mobile Scaling */
+  .hero-urgency-chip {
+    font-size: 0.72rem !important;
+    padding: 0.25rem 0.65rem !important;
+    white-space: nowrap !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .hero-title {
+    font-size: 1.7rem !important;
+    line-height: 1.22 !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Hero grid 100% screen fit */
+  .hero-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
