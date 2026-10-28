@@ -1759,3 +1759,28 @@ ul {
 .section-title-wrap.active::after {
   width: 70px; /* Scroll aate hi line expand hogi */
 }
+/* ==========================================================================
+   FIX "MOST POPULAR" BADGE VISIBILITY (NO CLIPPING)
+   ========================================================================== */
+
+.featured-service {
+  overflow: visible !important; /* Card ab badge ko nahi kaatega */
+  position: relative !important;
+}
+
+.badge-featured {
+  position: absolute !important;
+  top: -14px !important;
+  right: 20px !important;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
+  color: #ffffff !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  padding: 0.35rem 0.85rem !important;
+  border-radius: var(--radius-pill) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.45) !important;
+  z-index: 20 !important;
+  display: block !important;
+}

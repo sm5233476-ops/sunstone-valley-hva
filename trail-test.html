@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awwwards Fluid Smoke Trail Test</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 200vh;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+    .section-dark {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #071e33 0%, #0e3860 60%, #174b7e 100%);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .section-light {
+      min-height: 100vh;
+      background: #f8fafc;
+      color: #0e3860;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+    p { font-size: 1.25rem; opacity: 0.85; max-width: 600px; }
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+      border: 1px solid currentColor;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dark Mode Test Area -->
+  <section class="section-dark">
+    <span class="badge">Dark Hero Test</span>
+    <h1>Move Your Cursor Freely</h1>
+    <p>Watch the tapered leading needle dissolve into organic, swirling incense smoke with Navier-Stokes style curl noise.</p>
+  </section>
+
+  <!-- Light Mode Test Area -->
+  <section class="section-light">
+    <span class="badge">Light Content Test</span>
+    <h1>Works On Light Backgrounds Too</h1>
+    <p>Fast flicks create wider turbulence vortices; slow movement creates thin, calm vapor wisps. Scroll down and test!</p>
+  </section>
+
+  <!-- SINGLE SCRIPT DROP-IN (The entire magic) -->
+  <script src="js/mouse-smoke.js"></script>
+
+</body>
+</html>
