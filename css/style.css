@@ -1468,3 +1468,91 @@ ul {
     margin-top: 0.1rem !important;
   }
 }
+/* ==========================================================================
+   PERFECT HEADER LOGO & SPACING (No Emojis Stacking, No Crowding)
+   ========================================================================== */
+
+/* Modern Logo Badge Box */
+.logo-box {
+  width: 40px;
+  height: 40px;
+  background: #f0f7ff;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.15rem;
+  letter-spacing: -2px;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(14, 56, 96, 0.08);
+}
+
+.brand-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+  text-decoration: none;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name {
+  font-size: 1.22rem !important;
+  font-weight: 800 !important;
+  color: var(--primary-navy) !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+}
+
+.company-tagline {
+  font-size: 0.65rem !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  white-space: nowrap !important;
+}
+
+/* Mobile Screens Precision (iPhone / Android) */
+@media (max-width: 600px) {
+  .site-header {
+    padding-block: 0.45rem !important;
+  }
+
+  .header-flex {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .logo-box {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
+  }
+
+  .company-name {
+    font-size: 1.08rem !important;
+  }
+
+  .company-tagline {
+    font-size: 0.6rem !important;
+  }
+
+  /* Compact Free Quote Pill Button */
+  .btn-header {
+    padding: 0.5rem 0.95rem !important;
+    font-size: 0.8rem !important;
+    font-weight: 800 !important;
+    border-radius: var(--radius-pill) !important;
+    white-space: nowrap !important;
+    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.35) !important;
+  }
+}
