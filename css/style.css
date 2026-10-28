@@ -1663,3 +1663,99 @@ ul {
   font-variant-numeric: tabular-nums; /* Prevents text jumping while counting */
   text-shadow: 0 2px 10px rgba(234, 88, 12, 0.3);
 }
+/* ==========================================================================
+   CINEMATIC AWWWARDS BLUR-TO-FOCUS & CHOREOGRAPHED ENTRANCE (60 FPS)
+   ========================================================================== */
+
+/* 1. HERO OPENING ENTRANCE (Page load hote hi cinematic glide) */
+@keyframes blurSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(36px);
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes blurSlideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(45px);
+    filter: blur(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+/* Hero elements ek-ek karke focus honge (Staggered Choreography) */
+.hero-urgency-chip {
+  animation: blurSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both !important;
+}
+
+.hero-title {
+  animation: blurSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both !important;
+}
+
+.hero-subtitle {
+  animation: blurSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both !important;
+}
+
+.hero-features {
+  animation: blurSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both !important;
+}
+
+.hero-actions {
+  animation: blurSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both !important;
+}
+
+.trust-pill-group {
+  animation: blurSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both !important;
+}
+
+.hero-form-card {
+  animation: blurSlideFromRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both !important;
+}
+
+/* 2. SCROLL BLUR-TO-FOCUS REVEAL (Har line scroll karne par focus hogi) */
+.reveal {
+  opacity: 0 !important;
+  transform: translateY(32px) !important;
+  filter: blur(10px) !important; /* Dhundhla se start hoga */
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: opacity, transform, filter;
+}
+
+.reveal.active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  filter: blur(0) !important; /* Ekdum crystal clear focus */
+}
+
+/* 3. Section Titles ke neeche Animated Expanding Accent Line */
+.section-title-wrap {
+  position: relative;
+}
+
+.section-title-wrap::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-orange), var(--cool-blue));
+  margin: 1.25rem auto 0;
+  border-radius: var(--radius-pill);
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.section-title-wrap.active::after {
+  width: 70px; /* Scroll aate hi line expand hogi */
+}
